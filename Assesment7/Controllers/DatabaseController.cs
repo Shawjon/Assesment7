@@ -36,6 +36,7 @@ namespace Assesment7.Controllers
         }
         public ActionResult Summary(Guest guest)
         {
+           
             return View(guest);
         }
         public ActionResult EditGuest(int GuestID)
@@ -103,6 +104,7 @@ namespace Assesment7.Controllers
 
         public ActionResult DishSummary(Dish dish)
         {
+            
             return View(dish);
         }
         public ActionResult EditDish(int DishID)

@@ -8,11 +8,11 @@
     <form action="/Database/SaveDishChanges" method="post">
         <input type="hidden" name="DishID" value="@Model.DishID" />
         <div class="form-group">
-            <input type="text" class="form-control" name="PersonName" value="@Model.PersonName"  />
-            <input type="text" class="form-control" name="PhoneNumber" value="@Model.PhoneNumber"  />
+            <input type="text" class="form-control" pattern="[A-z ]{2,50}" name="PersonName" value="@Model.PersonName"  />
+            <input type="text" class="form-control" pattern="[\d]{1,10}" name="PhoneNumber" value="@Model.PhoneNumber"  />
         </div>
-        <input type="text" class="form-control" name="DishName" value="@Model.DishName"  />
-        <input type="text" class="form-control" name="DishDescription" value="@Model.DishDescription"  />
+        <input type="text" class="form-control" pattern="[A-z ]{2,50}" name="DishName" value="@Model.DishName"  />
+        <input type="text" class="form-control" pattern="[A-z .,!]{2,50}" name="DishDescription" value="@Model.DishDescription"  />
         <div class="form-group mt-2">
             <label>Any Dietary Restrictions?</label>
             @Html.DropDownListFor(model => model.Options, new List<SelectListItem>
