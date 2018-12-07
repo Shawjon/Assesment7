@@ -6,11 +6,14 @@
 
 @if (Model.Guest1 != "None")
 {
+<c>
     <h2>Thank you for registering, @Model.FirstName @Model.LastName</h2>
     <h3>You will be attending the Holiday Party on @Model.AttendanceDate</h3>
     <h3>Your email used to RSVP is @Model.EmailAddress</h3>
     <h3>We are excited to see you and @Model.Guest1 at the party!</h3>
     <a href="~/Database/AddDish" class="btn-default">Click here if you want to sign up to bring a dish!</a>
+    @Html.ActionLink("Main Page", "Index", "Home")
+</c>
 
 
 }
@@ -20,5 +23,6 @@ else
     <h3>You will be attending the Holiday Party on @Model.AttendanceDate</h3>
     <h3>Your email used to RSVP is @Model.EmailAddress</h3>
     <a href="~/Database/AddDish" class="btn-default">Click here if you want to sign up to bring a dish!</a>
+    @Html.ActionLink("Main Page", "Index", "Home") 
 }
 

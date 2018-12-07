@@ -7,9 +7,10 @@
 <h2>Dish Summary</h2>
 
 <h2>Thank you for your submission @Model.PersonName, the dish you are bringing is @Model.DishName</h2>
-<h4>@Model.DishDescription </h4>
+<h3>@Model.DishDescription </h3>
 @if (Model.Options != "N/A")
 {
-    <h5>This dish is @Model.Options</h5>
+    <h3>This dish is @Model.Options</h3>
 }
+@Html.ActionLink("Main Page", "Index", "Home")
 
