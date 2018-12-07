@@ -1,0 +1,15 @@
+﻿@model Assesment7.Models.Dish
+
+@{
+    ViewBag.Title = "Dish Summary";
+}
+
+<h2>Dish Summary</h2>
+
+<h2>Thank you for your submission @Model.PersonName, the dish you are bringing is @Model.DishName</h2>
+<h4>@Model.DishDescription </h4>
+@if (Model.Options != "N/A")
+{
+    <h5>This dish is @Model.Options</h5>
+}
+

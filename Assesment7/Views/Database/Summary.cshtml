@@ -1,0 +1,21 @@
+﻿@model Assesment7.Models.Guest
+@{
+    ViewBag.Title = "Summary";
+}
+
+
+@if (Model.Guest1 != "None")
+{
+    <h2>Thank you for registering, @Model.FirstName @Model.LastName</h2>
+    <h3>You will be attending the Holiday Party on @Model.AttendanceDate</h3>
+    <h3>Your email used to RSVP is @Model.EmailAddress</h3>
+    <h3>We are excited to see you and @Model.Guest1 at the party!</h3>
+
+}
+else
+{
+    <h2>Thank you for registering, @Model.FirstName @Model.LastName</h2>
+    <h3>You will be attending the Holiday Party on @Model.AttendanceDate</h3>
+    <h3>Your email used to RSVP is @Model.EmailAddress</h3>
+}
+
