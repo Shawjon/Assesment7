@@ -5,7 +5,7 @@
 
 <h2>Edit Guest</h2>
 <div class="container">
-    <form action="/Database/SaveGuest" method="post">
+    <form action="/Database/SaveGuestChanges" method="post">
         <input type="hidden" name="GuestID" value="@Model.GuestID" />
         <div class="form-group">
             <input type="text" class="form-control" name="FirstName" value="@Model.FirstName"  />
@@ -13,7 +13,7 @@
         </div>
         <div>The curent date attending is @Model.AttendanceDate</div>        
         <input type="date" class="form-control" name="AttendanceDate" max="2018-12-22" min="2018-12-15" value="@Model.AttendanceDate" required />
-        <input type="email" class="form-control" name="EmailAddress" value="@Model.EmailAddress"  />
+        <input type="email" class="form-control" name="EmailAddress"pattern="([\w\.\-_]+)?\w+@('@')[\w-_]+(\.\w+){1,}" value="@Model.EmailAddress"  />
         <div>Are you bringing a guest? Please enter their name below.</div>
         <input type="text" class="form-control" name="Guest1" Value="@Model.Guest1" />
 
